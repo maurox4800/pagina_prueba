@@ -1,0 +1,251 @@
+/* ==== FUENTES LOCALES ==== */
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('fonts/Lato-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto-Light_0.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* ==== HEADER ==== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-family: 'Lato-Bold';
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: 'Lato-Bold', sans-serif;
+  font-size: 1.25rem; /* Aproximadamente 20px */
+  color: #333; /* Gris oscuro */
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  margin-left: 1.5rem; /* Para alinearlo con el icono de menú */
+}
+
+
+/* ==== ICONO MENU ==== */
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #0073e6; /* Azul como en la imagen */
+}
+
+/* ==== MAIN ==== */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  position: relative;
+}
+
+/* ==== FONDO Y PERSONAJE ==== */
+.left {
+  width: 50%;
+  position: relative;
+}
+
+.fondo-personaje {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+}
+
+.fondo-img {
+  position: absolute;
+  top: 35px;
+  left: -64px;
+  width: 120%;
+  z-index: 0;
+}
+
+.personaje {
+  position: relative;
+  width: 94%;
+  z-index: 1;
+  left: -23px;
+  top: 35px;
+}
+
+.brazo {
+  position: absolute;
+  top: 59px;       /* Ajusta visualmente con base al personaje */
+  left: 24px;      /* Acércalo al hombro */
+  width: 463px;     /* Tamaño más grande */
+  transform-origin:  30% 50% 70%; /* Gira desde el codo */
+  animation: saludar 4s infinite ease-in-out;
+}
+@keyframes saludar {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg); /* Saludo más suave */
+  }
+}
+
+
+/* ==== CONTENIDO DERECHA ==== */
+.right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0rem 10px;
+}
+
+.titulo-bienvenido {
+  font-family: 'Lato-Bold';
+  font-weight: bold;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.descripcion {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.como-hacerlo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.icono-lapiz {
+  width: 50px;
+  height: 50px;
+  margin-top: 12px;
+}
+
+.texto-como h3 {
+  font-family: 'Lato-Bold';
+  font-weight: bold;
+  color: #0073e6;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.texto-como p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #0073e6;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  ;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  font-family: 'Lato-Bold';
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+  width: 360px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.opcion img {
+  width: 60px;
+  height: 60px;
+}
+
+.opcion div span {
+  display: block;
+  line-height: 1.2;
+}
+
+.opcion-verde {
+  background-color: #ffffff;
+  border: 2px solid #7f9c47;
+  color: #567a29;
+  cursor: url('img/cursor-avicola.png') 0 0, pointer;
+}
+
+.opcion-naranja {
+  background-color: #ffffff;
+  border: 2px solid #f58220;
+  color: #b35200;
+  cursor: url('img/cursor-ganaderia.png') 0 0, pointer;
+}
+
+
+/* ==== FOOTER ==== */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #00334e;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  align-items: center;
+}
+
+.navegacion button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.navegacion .home {
+  font-size: 1.8rem;
+}
+
+.sonido img {
+  width: 24px;
+}
